@@ -1,0 +1,391 @@
+/* Nhóm định dạng biến màu chính */
+:root {
+    --main_color: rgb(0, 132, 255);
+}
+
+.time-label{
+    color: rgba(0, 0, 0, 0.432);
+}
+
+/* Nhóm định dạng cho bài viết nổi bật */
+.homepage-content .hot-article {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    margin: 10px 0px;
+    animation: slideCloseLeft 0.8s forwards;
+}
+.hot-article.show {
+    display: block;
+    animation: slideOpenLeft 0.8s forwards;
+}
+.hot-article {
+    flex-shrink: 0;
+    flex-basis: 100%;
+    flex-grow: 0;
+    color: black;
+    width: 100%;
+    z-index: 0;
+    text-decoration: none;
+}
+.hot-article h3 {
+    text-align: justify;
+    font-size: 30px;
+    width: 100%;
+}
+.homepage-content .hot-article img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.hot-article-container a {
+    width: 100%;
+}
+
+/* Nhóm định dạng cho container bài viết nổi bật */
+.hot-article-container {
+    position: relative;
+    display: block;
+    left: 0px;
+    top: 0px;
+    height: 600px;
+}
+.hot-article-container:hover .btn {
+    display: block;
+}
+
+/* Nhóm định dạng cho nút điều hướng */
+.hot-article-container .btn {
+    position: absolute;
+    padding: 20px 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.432);
+    backdrop-filter: blur(10px);
+}
+.hot-article-container .btn .fa-solid {
+    font-size: 2rem;
+    color: white;
+}
+.btn.slide-left {
+    display: none;
+    left: 0px;
+    top: 46%;
+    z-index: 2;
+    transform: translate(0px, -50%);
+}
+.btn.slide-right {
+    display: none;
+    right: 0px;
+    top: 46%;
+    z-index: 2;
+    transform: translate(0px, -50%);
+}
+
+/* Nhóm định dạng animation cho bài viết nổi bật */
+@keyframes slideOpenLeft {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slideCloseLeft {
+    from {
+        opacity: 1;
+    }
+    to {
+        display: none;
+        opacity: 0;
+    }
+}
+
+/* Nhóm định dạng cho container chính của homepage */
+.homepage.homepage-container {
+    margin: 20px 0px;
+    border-left: 1px solid rgba(0, 0, 0, 0.432);
+    border-right: 1px solid rgba(0, 0, 0, 0.432);
+}
+.homepage .container__content {
+    padding: 0px 5px;
+    display: grid;
+    grid-template-columns: calc(100% - 10px);
+    grid-template-rows: auto auto auto auto 100px;
+    column-gap: 10px;
+}
+.main-container {
+    display: grid;
+    grid-template-columns: 5% 65% 30%;
+    grid-template-rows: 100%;
+}
+
+/* Nhóm định dạng cho các hàng trong homepage */
+.homepage-row-1 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+    column-gap: 10px;
+}
+.homepage-row-3 {
+    display: grid;
+    grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+    column-gap: 10px;
+    grid-template-rows: 100%;
+}
+.homepage-row-2 {
+}
+.homepage-row-4 {
+}
+
+/* Nhóm định dạng cho tiêu đề và đường phân cách */
+.homepage-content .type-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: var(--main_color);
+}
+.hr_cat {
+    height: 5px;
+    background-color: var(--main_color);
+    margin-top: 10px;
+    border: none;
+    width: 100%;
+}
+.hr_article {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Nhóm định dạng cho tin tức hiện tại */
+.homepage-content.current-news {
+}
+.current-news-container {
+    display: block;
+    margin-top: 10px;
+    height: 500px;
+    overflow-y: auto;
+}
+.current-news-container .article-news {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-bottom   : 10px;
+}
+.current-news-container .article-news p{
+    font-size: 1rem;
+    
+}
+.current-news-container .article-news i{
+    display: block;
+    margin-top: 5px;
+    font-size: 0.87rem;
+}
+
+
+/* Nhóm định dạng cho biểu tượng Font Awesome */
+.homepage-content .fa-solid {
+    color: var(--main_color);
+    float: left;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+.homepage-content.thoi-su button i.fa-solid {
+    color: black;
+    font-size: 1rem;
+    padding: 0px;
+}
+
+/* Nhóm định dạng cho bài viết thời sự */
+.homepage-content.thoi-su {
+}
+.thoisu-wrapper {
+    display: flex;
+    justify-content: left;
+}
+.article-thoisu-container {
+    margin: 20px 10px;
+    width: calc(100% - 20px);
+    height: 100%px;
+    overflow-x: hidden;
+}
+.thoisu-article {
+    padding: 10px;
+    flex-wrap: 0;
+    flex-shrink: 0;
+    display: block;
+    width: 300px;
+    height: auto;
+    text-decoration: none;
+    color: black;
+    transition: 0.1s;
+}
+.thoisu-article:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+    color: red;
+    transform: translateX();
+}
+.thoisu-article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.thoisu-article p {
+
+    font-size: 1.3rem;
+    font-style: normal;
+    margin-top: 10px;
+    font-weight: 100;
+}
+.thoisu-head-container {
+    display: flex;
+    justify-content: space-between;
+}
+.thoisu-title-container {
+    display: flex;
+}
+.thoisu-button-container {
+}
+
+/* Nhóm định dạng cho phần bên phải */
+
+/* Nhóm định dạng hover cho bài viết */
+article:hover {
+    color: red;
+    cursor: pointer;
+}
+/* Nhóm định dạng phần tin tức hàng 4 */
+.top-news.container{
+    display: block;
+
+    padding: 10px;
+    font-size: 1.5rem;
+}
+.top-news.container img{
+    width: 100%;
+    height: 300px;
+    display: flex;
+
+    border-radius: 10px;
+    object-fit: cover;
+}
+.top-news.container p{
+    margin-top: 10px;
+}
+.top-news.container i{
+    font-weight: 100;
+    font-size: 1rem;
+    color: gray;
+    margin-top: 10px;
+}
+.list-news.container{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    margin-top: 5px;
+    width: 100%;
+
+
+}
+.list-news.container:hover{
+    background-color: rgb(0, 0, 0, 0.1);
+    color: red;
+
+}
+.list-news.container img{
+    width: 25%;
+    height: 80px;
+    padding: 5px;
+    border-radius: 5%   ;
+    object-fit: cover;
+}
+.list-news.container p{
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.list-news.container i{
+    font-size: 1rem;
+    font-weight: 100;
+}
+.list-news.container .news-title{
+    margin-left: 16px;
+}
+.module-1.list-news{
+    padding: 10px;
+    height: 400px;
+    overflow-y: hidden;
+    padding-right: 30px;
+    transition: overflow 0.3s ease;
+    scrollbar-width: none; 
+}
+.module-1.list-news:hover{
+    overflow-y: auto;
+}
+
+/* Nhóm định dạng responsive cho các kích thước màn hình */
+@media (width <= 1600px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        grid-template-rows: 100%;
+    }
+
+    .container-left {
+        display: none;
+    }
+    .container-right {
+        margin-right: 5px;
+    }
+}
+@media (width <= 1500px) {
+    .hot-article h3 {
+        font-size: 20px;
+    }
+    .article-news h3 {
+        font-size: 17px;
+    }
+}
+@media (width <= 1340px) {
+    .container-right {
+        display: none;
+    }
+    .main-container {
+        display: block;
+    }
+}
+@media (width <= 1000px) {
+    .homepage .container__content {
+        display: block;
+    }
+    .homepage-row-1 {
+        display: block;
+    }
+    .hot-article-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hot-article > * {
+        display: inline-block;
+        width: 100%;
+    }
+    .current-news-container {
+        height: 300px;
+    }
+    .homepage-content.hot-news {
+    }
+    .homepage-content.current-news {
+    }
+    .homepage-row-3 {
+        display: block;
+    }
+    .btn.slide-left {
+        display: none;
+    }
+    .btn.slide-right {
+        display: none;
+    }
+}
