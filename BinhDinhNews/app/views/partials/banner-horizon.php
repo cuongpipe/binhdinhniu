@@ -1,1 +1,0 @@
-<img class="img-banner-h" src=".\images\banner\hoc_tap_theo_guong_bacho_e36ff.jpg" alt="">

@@ -1,1 +1,0 @@
-            http://localhost/BinhDinhNews/public/dulich.php?idcat=1        
